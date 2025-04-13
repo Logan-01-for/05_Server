@@ -26,6 +26,15 @@
 			</textarea>
 		</div>
 		
+		<%--
+			todoNo 도 수정 요청 시 파라미터로 보내기
+			왜?
+			어떤 todoNo를 가진 행을 수정하고자 하는 것인지
+			SQL의 WHERE(조건식)에서 이용해야하기 때문.
+			
+			param. -> url(/todo/update?todoNO=1)에 있는 ?todoNo=1
+			EL 표현식에서 ${param.key} -> ${param.todoNo} -> 1 반환
+		 --%>
 		<input type="hidden" name="todoNo" value="${param.todoNo}">
 		
 		<button>수정 완료</button>
